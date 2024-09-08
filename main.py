@@ -134,6 +134,6 @@ if __name__ == '__main__':
     db_results = {
         'MariaDB': mysql_crud_operations(),
         'PostgreSQL': postgres_crud_operations(),
-        'Firebird': firebird_crud_operations(),
+        #'Firebird': firebird_crud_operations(),
     }
     plot_results(db_results)

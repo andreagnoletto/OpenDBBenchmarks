@@ -8,6 +8,9 @@
 - Database configuration through `.env` file for ease of use.
 - Detailed performance comparison displayed in graphical charts.
 - Easily extendable to add support for new databases or custom operations.
+- Open-source and free to use for personal and commercial projects.
+- Simple and intuitive interface for running benchmark tests and analyzing results.
+- Lightweight and fast, with minimal dependencies and resource requirements.
 
 ## Getting Started:
 1. **Clone the repository**:
@@ -31,6 +34,8 @@
         DB_USER=your_database_user
         DB_PASSWORD=your_database_password
         DB_NAME=your_database_name
+        isql 'localhost:/Users/andreagnoletto/PARA/1.Projects/compareDB/firebird.fbd' -user SYSDBA -password masterkey
+
         ```
     - Replace `your_database_host`, `your_database_port`, `your_database_user`, `your_database_password`, and `your_database_name` with your database credentials.
     - Save the `.env` file.
@@ -65,11 +70,46 @@
     - Your contributions are welcome and appreciated!
 8. **License**:
     - This project is licensed under the MIT License. See the `LICENSE` file for more information.
-9. **Acknowledgements**:
-    - This project was inspired by the need for a simple and effective tool to compare the performance of different databases in CRUD operations.
-    - Special thanks to the developers of the `matplotlib` library for providing a powerful tool for generating charts and visualizing data.
-    - Thank you to the open-source community for creating and maintaining the libraries and tools that make projects like this possible.
-10. **Contact**:
-    - If you have any questions or feedback, feel free to contact me at
-    - Email: andreagnoletto@gmail.com
+
+## Features to be added:
+This benchmark tool aims to grow with new features and databases over time. Below are some of the planned improvements:
+
+### 1. Support for Additional Databases
+We plan to extend the benchmarking to include the following databases:
+- **SQLite**: Lightweight database engine for file-based databases.
+- **MariaDB**: High-performance, community-driven fork of MySQL.
+- **Oracle Database**: A powerful enterprise-grade RDBMS.
+- **Microsoft SQL Server**: A widely used corporate database with advanced tools.
+- **MongoDB**: A NoSQL database ideal for large-scale, unstructured data.
+- **Cassandra**: A distributed NoSQL database optimized for high availability and large datasets.
+
+### 2. Change of Data Types in CRUD Simulation
+In future iterations, we plan to simulate a wider range of CRUD operations using various data types to reflect real-world scenarios. Planned improvements include:
+- **Integer and Float** data types for mathematical and financial operations.
+- **Date and Time** types for timestamped data, event tracking, etc.
+- **Blob and Text fields** for handling large volumes of text and binary data.
+
+### 3. Database-Specific Tuning Parameters
+Each database will be tested with multiple tuning configurations to optimize performance. Tuning will involve:
+- **Page Size, Cache Settings**: Optimize how data is stored and retrieved.
+- **Connection Pooling**: Improve performance for high-concurrency operations.
+- **Indexes and Constraints**: Experiment with different indexing strategies to optimize query performance.
+- **Memory and Disk I/O**: Optimize resource allocation for better read/write speeds.
+
+### 4. Transaction and Isolation Level Tuning
+We plan to implement simulations for various transaction isolation levels (e.g., READ COMMITTED, REPEATABLE READ, SERIALIZABLE) to measure the impact on performance across databases. This will also include testing:
+- **Batch Inserts**: To simulate high-throughput environments.
+- **Bulk Reads and Writes**: To evaluate performance in large-scale data operations.
+
+### 5. Distributed and Replicated Database Testing
+For databases that support distributed or replicated architectures (e.g., Cassandra, MongoDB, PostgreSQL with replication), we plan to benchmark:
+- **Replication Latency**
+- **High Availability**
+- **Performance under failover scenarios**
+
+These features will ensure more comprehensive benchmarks and offer a clearer picture of the performance of each database under different scenarios.
+
+## How You Can Contribute
+Feel free to open issues or pull requests if you want to add more databases, propose optimizations, or implement new features!
+
     

@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 # Load environment variables from .env
 load_dotenv()
 
-NUM_CREATE = 100000
-NUM_READ   = 100000
-NUM_UPDATE = 100000
-NUM_DELETE = 100000
+NUM_CREATE = 10000
+NUM_READ   = 10000
+NUM_UPDATE = 10000
+NUM_DELETE = 10000
 
 
 def perform_crud_operations(db_type, conn, cursor):
@@ -134,6 +134,6 @@ if __name__ == '__main__':
     db_results = {
         'MariaDB': mysql_crud_operations(),
         'PostgreSQL': postgres_crud_operations(),
-        #'Firebird': firebird_crud_operations(),
+        'Firebird': firebird_crud_operations(),
     }
     plot_results(db_results)

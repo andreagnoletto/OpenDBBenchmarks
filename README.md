@@ -2,7 +2,7 @@
 
 **OpenDBBenchmarks** is an open-source tool designed to compare the performance of different relational database management systems (RDBMS) in basic CRUD operations (Create, Read, Update, Delete). The goal is to provide clear and measurable benchmarks to help developers and database administrators choose the most efficient solution for their needs.
 
-![Example](https://user-images.githubusercontent.com/91411698/134765073-3b3b3b7b-3b7b-4b7b-8b7b-3b7b3b7b3b7b.png)
+![Example Image](https://github.com/andreagnoletto/OpenDBBenchmarks/blob/2e92473bfe5cf8c7fabac1080770930d7873f260/Figure_1.png)
 
 ## Features:
 - Benchmarking for **insert**, **read**, **update**, and **delete** operations.

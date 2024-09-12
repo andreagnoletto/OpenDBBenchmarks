@@ -24,6 +24,7 @@
    ```bash
    pip install -r requirements.txt
    ```
+    or
    ```bash
    pip install mysql-connector-python psycopg firebirdsql python-dotenv matplotlib
    ```
@@ -36,7 +37,7 @@
         DB_USER=your_database_user
         DB_PASSWORD=your_database_password
         DB_NAME=your_database_name
-        isql 'localhost:/Users/andreagnoletto/PARA/1.Projects/compareDB/firebird.fbd' -user SYSDBA -password masterkey
+        isql 'localhost://path/to/firebird.fbd' -user SYSDBA -password masterkey
 
         ```
     - Replace `your_database_host`, `your_database_port`, `your_database_user`, `your_database_password`, and `your_database_name` with your database credentials.
@@ -46,31 +47,14 @@
 4. **Run the benchmark tests**:
     - Run the following command to start the benchmark tests:
         ```bash
-        python benchmark.py
+        python main.py
         ```
-    - The script will run the CRUD operations on the configured database and display the results in the terminal.
-    - The results will also be saved in a CSV file in the `results` directory.
-5. **Analyze the results**:
-    - Run the following command to generate the performance comparison charts:
-        ```bash
-        python analyze_results.py
-        ```
-    - The script will generate charts comparing the performance of the different databases in the CRUD operations.
-    - The charts will be saved in the `charts` directory.
-    - Open the generated charts to visualize the performance comparison between the databases.
-    - You can customize the charts by modifying the `analyze_results.py` script to include additional metrics or change the chart settings.
-    - **Note**: The charts are generated using the `matplotlib` library. If you encounter any issues with the chart generation, make sure you have the necessary dependencies installed.
-    - 
-6. **Extend the tool**:
-    - You can extend the tool to add support for new databases or custom operations.
-    - To add support for a new database, create a new class in the `databases` module that implements the CRUD operations for the specific database.
-    - To add support for custom operations, create a new class in the `operations` module that defines the custom operations to be benchmarked.
-    - Update the `benchmark.py` script to include the new database or operation in the benchmark tests.
-    - You can also modify the `analyze_results.py` script to include the new database or operation in the performance comparison charts.
-7. **Contribute**:
+    - The script will run the CRUD operations on the configured database and display the results in a window like example image above.
+    ~~- The results will also be saved in a CSV file in the `results` directory.~~
+5. **Contribute**:
     - If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on the GitHub repository.
     - Your contributions are welcome and appreciated!
-8. **License**:
+6. **License**:
     - This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
 ## Features to be added:

@@ -82,16 +82,10 @@ Each database will be tested with multiple tuning configurations to optimize per
 - **Indexes and Constraints**: Experiment with different indexing strategies to optimize query performance.
 - **Memory and Disk I/O**: Optimize resource allocation for better read/write speeds.
 
-### 4. Transaction and Isolation Level Tuning
-We plan to implement simulations for various transaction isolation levels (e.g., READ COMMITTED, REPEATABLE READ, SERIALIZABLE) to measure the impact on performance across databases. This will also include testing:
-- **Batch Inserts**: To simulate high-throughput environments.
-- **Bulk Reads and Writes**: To evaluate performance in large-scale data operations.
-
-### 5. Distributed and Replicated Database Testing
-For databases that support distributed or replicated architectures (e.g., Cassandra, MongoDB, PostgreSQL with replication), we plan to benchmark:
-- **Replication Latency**
-- **High Availability**
-- **Performance under failover scenarios**
+### 4. Advanced Benchmarking Metrics
+In addition to the basic CRUD operations, we plan to introduce more advanced metrics to evaluate database performance. These metrics include:
+- **Query Execution Time**: Measure the time taken to execute complex queries.
+- **Concurrency Testing**: Evaluate how databases perform under high-concurrency scenarios.
 
 These features will ensure more comprehensive benchmarks and offer a clearer picture of the performance of each database under different scenarios.
 

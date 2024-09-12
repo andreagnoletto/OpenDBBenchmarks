@@ -121,7 +121,7 @@ def plot_results(results):
     plt.plot(dbs, update_times, label='Update', marker='o')
     plt.plot(dbs, delete_times, label='Delete', marker='o')
 
-    plt.title(f'CRUD Performance Comparison - less is better (n={NUM_CREATE})')
+    plt.title(f'CRUD Performance Comparison (n={NUM_CREATE})')
     plt.xlabel('Databases')
     plt.ylabel('Time (seconds)')
     plt.legend()
